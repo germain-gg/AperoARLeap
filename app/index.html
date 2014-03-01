@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+	<div id="video-container"></div>
+
+	<section id="option-container">
+		
+		<button id="disable-emergency">Disable Emergency mode</button>
+
+		<div class="video-channel">
+			
+			Canal vidéo : 
+
+			<button data-channel="0" class="btn-active">Caméra frontal</button>
+
+			<button data-channel="3">Caméra secondaire</button>
+
+		</div>
+
+	</section>
+
+	<!--<script src="lib/dronestream/nodecopter-client.min.js"></script>-->
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
