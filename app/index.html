@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>AperoARLeap</title>
 	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-	<div id="video-container"></div>
+	<!-- <div id="video-container"></div> -->
+
+	<img src="http://localhost:1337">
 
 	<section id="option-container">
 		
@@ -25,8 +27,14 @@
 
 	</section>
 
-	<!--<script src="lib/dronestream/nodecopter-client.min.js"></script>-->
+
+
+	<!--<script src="/dronestream/nodecopter-client.js"></script>-->
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="scripts/main.js"></script>
+	<!--<script>
+		// On crée le retour vidéo du drone
+		new NodecopterStream(document.getElementById("video-container"));
+	</script>-->
 </body>
 </html>

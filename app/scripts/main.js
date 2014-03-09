@@ -1,7 +1,5 @@
 (function() {
 
-	// On crée le retour vidéo du drone
-	// new NodecopterStream(document.getElementById("video-container"));
 	// On se connecte au socket du serveur
 	var socket = io.connect('http://localhost:8888');
 

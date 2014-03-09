@@ -6,7 +6,6 @@
 
 var express = require('express')
   , http = require("http")
-  // , droneStream = require('dronestream')
   ;
 
 var app    = express()
@@ -17,7 +16,6 @@ app.use(express.bodyParser());
 app.use(express.static(__dirname+'/app'));
 
 server.listen(8888);
-//droneStream.listen(server);
 
 /******************************/
 /*          ArDrone           */
@@ -27,6 +25,8 @@ var arDrone = require('ar-drone')
   , drone = arDrone.createClient()
   ;
 
+require('ar-drone-png-stream')(drone, { port: 1337 });
+
 function disableEmercyMode() {
   drone.disableEmergency();
   console.log("Disabling emergency mode... wait a few moment pls.");
@@ -34,7 +34,7 @@ function disableEmercyMode() {
 
 function switchCamera(pChannel) {
   var channel = parseInt(pChannel, 10);
-  //drone.config('video:video_channel', channel);
+  drone.config('video:video_channel', channel);
   console.log("Switch to " + (channel==0 ? "head" : "bottom") + " camera");
 }
 
