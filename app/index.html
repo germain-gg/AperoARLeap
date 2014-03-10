@@ -9,7 +9,7 @@
 
 	<!-- <div id="video-container"></div> -->
 
-	<img src="http://localhost:1337">
+	<img src="http://localhost:1337" class="video-container">
 
 	<section id="option-container">
 		
@@ -25,16 +25,19 @@
 
 		</div>
 
+		<div class="general-action">
+			
+			Control : 
+
+			<button id="takeoff">Décollage</button>
+
+			<button id="land">Atterrissage</button>
+
+		</div>
+
 	</section>
 
-
-
-	<!--<script src="/dronestream/nodecopter-client.js"></script>-->
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="scripts/main.js"></script>
-	<!--<script>
-		// On crée le retour vidéo du drone
-		new NodecopterStream(document.getElementById("video-container"));
-	</script>-->
 </body>
 </html>

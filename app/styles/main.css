@@ -3,7 +3,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 }
-[id=video-container] canvas {
+.video-container {
 	position: absolute;
 	z-index: 1;
 	width: 100% !important;
@@ -12,10 +12,20 @@ html, body {
 
 [id=option-container] {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 2;
+
+	background: rgba(0,0,0,.5);
+
+	text-align: center;
+
+	padding: 20px 0;
+}
+[id=option-container] > * {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .btn-active {

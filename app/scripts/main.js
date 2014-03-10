@@ -32,4 +32,12 @@
 
 	}
 
+	document.getElementById("takeoff").addEventListener('click', function(evt) {
+		socket.emit('takeoff', 'takeoff');
+	}, false);
+
+	document.getElementById("land").addEventListener('click', function(evt) {
+		socket.emit('land', 'land');
+	}, false);
+
 })();
