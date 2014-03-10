@@ -52,12 +52,12 @@ io.sockets.on('connection', function (socket) {
 
   socket.on('takeoff', function() {
     console.log("takeoff");
-    cleanTakeOff();
+    // cleanTakeOff();
   });
 
   socket.on('land', function() {
     console.log("landing");
-    cleanLanding();
+    // cleanLanding();
   });
 
 
@@ -149,13 +149,13 @@ function goFrontBack(hands) {
 
   if(insideThresold(roll, thresold.frontBack.min, thresold.frontBack.max)) {    
     var speed = rationalize(roll, thresold.frontBack.min, thresold.frontBack.max);
-    drone.front(-speed);
+    // drone.front(-speed);
     console.log("BACK : " + speed);
   }
 
   if(roll < 0 && insideThresold(-roll, thresold.frontBack.min, thresold.frontBack.max)) {
     var speed = rationalize(-roll, thresold.frontBack.min, thresold.frontBack.max);
-    drone.front(speed);
+    // drone.front(speed);
     console.log("FRONT : " + speed);
   }
 
