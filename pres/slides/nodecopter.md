@@ -1,0 +1,1 @@
+![Leap Motion](images/nodecopter.png)

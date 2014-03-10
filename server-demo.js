@@ -75,7 +75,7 @@ function onLeapFrame(Frame) {
 
   var hands = Frame.hands;
 
-  if(!droneFlying) {
+  if(droneFlying) {
 
     if(hands.length > 0) {
 
